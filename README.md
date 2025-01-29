@@ -1,4 +1,4 @@
-# Bitcoin Price Telegram Bot 🤖 📈 
+# Bitcoin Price Telegram Bot 🤖 📈
 
 A Telegram bot that monitors and reports Bitcoin price changes from Binance, with fun emoji indicators for price movements.
 
@@ -15,8 +15,22 @@ A Telegram bot that monitors and reports Bitcoin price changes from Binance, wit
 
 1. Create a Telegram bot and get your bot token from [@BotFather](https://t.me/botfather)
 
-2. Set the environment variable:
+   To get your `TELEGRAM_GROUP_CHAT_ID` (for group chats):
+   1. Add the bot to your group
+   2. Send a message in the group
+   3. Access <https://api.telegram.org/bot><YourBOTToken>/getUpdates
+   4. Look for the "chat" -> "id" field in the group message response
+   Note: Group chat IDs are typically negative numbers
+
+2. Set the environment variables:
 
    ```bash
-    TELEGRAM_BOT_TOKEN=replace-token-here go run main.go
-    ```
+   export TELEGRAM_BOT_TOKEN=replace-token-here
+   export TELEGRAM_GROUP_CHAT_ID=replace-group-chat-id-here
+   ```
+
+3. run
+
+  ```bash
+  go run main.go
+  ```
